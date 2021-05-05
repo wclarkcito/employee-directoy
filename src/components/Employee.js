@@ -54,20 +54,21 @@ export default class Employee extends Component {
                 <table>
                     <tr>
                         <th>img</th>
-                        <th>name</th>
+                        <th>first</th>
+                        <th>last</th>
                         <th>phone</th>
                         <th>email</th>
                         <th>location</th>
                     </tr>
-                    {this.state.results.map((employee) => { return <EmployeeDetail name={employee.name.first} thumbnail={employee.picture.thumbnail} email={employee.email} phone={employee.cell} location={employee.location.state} /> })}
-                    {/* <tr> */}
-                    {/* .map on state results output a row in table(component) */}
-                    {/* <td>img</td>
-                        <td>Bill</td>
-                        <td>(323)534-4872)</td>
-                        <td>trowe@gmail.com</td>
-                        <td>Chicago</td>
-                    </tr> */}
+                    {this.state.results.map((employee) => {
+                        return <EmployeeDetail first={employee.name.first}
+                            last={employee.name.last}
+                            thumbnail={employee.picture.thumbnail}
+                            email={employee.email}
+                            phone={employee.cell}
+                            location={employee.location.state} />
+                    })}
+
                 </table>
 
 

@@ -9,9 +9,9 @@ export default class EmployeeDetail extends Component {
                 {/* .map on state results output a row in table(component) */}
                 <td><img src={this.props.thumbnail} alt="thumbnail" /> </td>
                 <td>{this.props.name}</td>
-                <td>(323)534-4872)</td>
-                <td>trowe@gmail.com</td>
-                <td>Chicago</td>
+                <td>{this.props.phone}</td>
+                <td>{this.props.email}</td>
+                <td>{this.props.location}</td>
             </tr>
 
 

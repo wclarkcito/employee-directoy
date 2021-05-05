@@ -59,7 +59,7 @@ export default class Employee extends Component {
                         <th>email</th>
                         <th>location</th>
                     </tr>
-                    {this.state.results.map((employee) => { return <EmployeeDetail name={employee.name.first} thumbnail={employee.picture.thumbnail} /> })}
+                    {this.state.results.map((employee) => { return <EmployeeDetail name={employee.name.first} thumbnail={employee.picture.thumbnail} email={employee.email} phone={employee.cell} /> })}
                     {/* <tr> */}
                     {/* .map on state results output a row in table(component) */}
                     {/* <td>img</td>

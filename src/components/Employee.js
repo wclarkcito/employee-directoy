@@ -1,6 +1,7 @@
 import API from '../utils/API';
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import EmployeeDetail from './EmployeeDetail'
 
 export default class Employee extends Component {
 
@@ -11,7 +12,8 @@ export default class Employee extends Component {
     }
 
     componentDidMount() {
-
+        console.log("component mounted")
+        this.userInitialize()
     }
 
     userInitialize = () => {
@@ -20,12 +22,12 @@ export default class Employee extends Component {
                 console.log(res)
                 let apiResults = res.data.results;
                 console.log(apiResults);
-                apiResults = apiResults.map(item => ({
-                    id: item.id,
-                    name: item.name.first + item.name.last
+                // apiResults = apiResults.map(item => ({
+                //     id: item.id,
+                //     name: item.name.first + item.name.last
 
 
-                }))
+                // }))
                 this.setState({ results: apiResults })
                 this.setState({ queryResults: apiResults })
             })
@@ -49,6 +51,25 @@ export default class Employee extends Component {
                 <div className="jumbotron">
                     <h1>Employee Directory</h1>
                 </div>
+                <table>
+                    <tr>
+                        <th>img</th>
+                        <th>name</th>
+                        <th>phone</th>
+                        <th>email</th>
+                        <th>location</th>
+                    </tr>
+                    {this.state.results.map((employee) => { return <EmployeeDetail name={employee.name.first} thumbnail={employee.picture.thumbnail} /> })}
+                    {/* <tr> */}
+                    {/* .map on state results output a row in table(component) */}
+                    {/* <td>img</td>
+                        <td>Bill</td>
+                        <td>(323)534-4872)</td>
+                        <td>trowe@gmail.com</td>
+                        <td>Chicago</td>
+                    </tr> */}
+                </table>
+
 
 
             </div>

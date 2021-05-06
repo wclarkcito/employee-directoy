@@ -12,6 +12,7 @@ export default class EmployeeDetail extends Component {
                 <td>{this.props.last}</td>
                 <td>{this.props.phone}</td>
                 <td>{this.props.email}</td>
+
                 <td>{this.props.location}</td>
             </tr>
 

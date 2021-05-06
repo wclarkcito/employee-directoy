@@ -37,5 +37,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+   
+  },
+
+  "homepage": 
+    "https://wclarkcito.github.io/employee-directory"
+  
+
 }

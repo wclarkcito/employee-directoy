@@ -12,6 +12,10 @@ An employee or manager would benefit greatly from being able to view non-sensiti
 
 ![Screen Shot 2021-05-06 at 2 12 34 PM](https://user-images.githubusercontent.com/73144564/117366121-2760e400-ae75-11eb-845d-dee47e8d9463.png)
 
-## Links
+## Github Repository
 
-https://github.com/wclarkcito/employee-directoy
+https://github.com/wclarkcito/employee-directory
+
+## Github Pages Deployed link
+
+https://wclarkcito.github.io/employee-directoy/

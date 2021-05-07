@@ -18,4 +18,4 @@ https://github.com/wclarkcito/employee-directory
 
 ## Github Pages Deployed link
 
-https://wclarkcito.github.io/employee-directoy/
+https://wclarkcito.github.io/employee-directory/

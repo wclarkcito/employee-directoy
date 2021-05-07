@@ -49,9 +49,32 @@ export default class Employee extends Component {
     handleSearch = (event) => {
         console.log(event.target.value)
         this.setState({ search: event.target.value })
-        this.searchEmployees(this.state.search)
+
     }
 
+    // componentDidUpdate() {
+    //     if (this.state.search) {
+    //         this.searchEmployees(this.state.search)
+
+    //     }
+    // }
+    sortFirst = () => {
+        let sortArray = this.state.queryResults
+        sortArray.sort((a, b) => {
+            let fa = a.name.first.toLowerCase(),
+                fb = b.name.first.toLowerCase();
+
+            if (fa < fb) {
+                return -1;
+            }
+            if (fa > fb) {
+                return 1;
+            }
+            return 0;
+        });
+        this.setState({ queryResults: sortArray })
+
+    }
     render() {
         return (
             <div>
@@ -65,7 +88,7 @@ export default class Employee extends Component {
                 <table>
                     <tr>
                         <th>img</th>
-                        <th>first</th>
+                        <th onClick={this.sortFirst}>first</th>
                         <th>last</th>
                         <th>phone</th>
                         <th>email</th>

@@ -14,8 +14,8 @@ An employee or manager would benefit greatly from being able to view non-sensiti
 
 ## Github Repository
 
-https://github.com/wclarkcito/employee-directory
+https://github.com/wclarkcito/employee-directoy
 
-## Github Pages Deployed link
+## Netlify deployed link
 
-https://wclarkcito.github.io/employee-directory/
+https://focused-benz-755841.netlify.app/
